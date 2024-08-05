@@ -33,11 +33,11 @@ function playRound() {
       console.log("You lose! Rock beats scissors!");
       return computerScore++;
     } else if (computerChoice === humanChoice) {
-      console.log("It's a tie!!!")
+      console.log("It's a tie!")
     }
 } 
 
-function game() {
+function playGame() {
   for (let i = 0; i < 5; i++) {
     playRound();
     console.log("Computer score: " + computerScore + " | Your score: " + humanScore)
@@ -51,4 +51,4 @@ function game() {
   }
 }
 
-game();
+playGame();
