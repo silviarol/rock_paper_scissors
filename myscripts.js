@@ -33,20 +33,24 @@ function playRound() {
       return computerScore++;
     } else if (computerChoice === humanChoice) {
       console.log("It's a tie!")
+    } else {
+      console.log("Please type again!")
     }
 } 
 
 function playGame() {
   for (let i = 0; i < 5; i++) {
     playRound();
-    console.log("Computer score: " + computerScore + " | Your score: " + humanScore)
   }
   if (humanScore > computerScore) {
     console.log("CONGRATS, YOU WIN!")
+    console.log("Computer score: " + computerScore + " | Your score: " + humanScore)
   } else if (computerScore > humanScore) {
-    console.log("YOU LOSE! TRY AGAIN!")
+    console.log("COMPUTER WINS! TRY AGAIN!")
+    console.log("Computer score: " + computerScore + " | Your score: " + humanScore)
   } else {
     console.log("YOU TIED!")
+    console.log("Computer score: " + computerScore + " | Your score: " + humanScore)
   }
 }
 
