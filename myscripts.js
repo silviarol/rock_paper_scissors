@@ -38,18 +38,4 @@ function playRound() {
     }
 } 
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    playRound();
-    console.log("Computer score: " + computerScore + " | Your score: " + humanScore);
-  }
-  if (humanScore > computerScore) {
-    console.log("CONGRATS, YOU WIN!");
-  } else if (computerScore > humanScore) {
-    console.log("COMPUTER WINS! TRY AGAIN!");
-  } else {
-    console.log("YOU TIED!");
-  }
-}
-
-playGame();
+playRound()
