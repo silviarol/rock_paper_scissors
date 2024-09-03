@@ -45,7 +45,7 @@ function playRound(humanChoice) {
   } else if (computerChoice === humanChoice) {
       display.textContent = "It's a tie!";
   }
-  
+
 } 
 
 const rock = document.querySelector(".rock");
@@ -62,4 +62,9 @@ paper.addEventListener("click", () => {
 
 scissors.addEventListener("click", () => {
   playRound("scissors");
+});
+
+const reset = document.querySelector(".reset");
+reset.addEventListener("click", () => {
+  window.location.reload();
 });
