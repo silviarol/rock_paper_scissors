@@ -17,12 +17,12 @@ function playRound(humanChoice) {
   displayTwo.textContent = `Computer score: ${computerScore} | Your score: ${humanScore}`;
 
   if (humanScore == 5) {
-        displayThree.textContent = `CONGRATS! YOU WIN`;
-    } else if (computerScore == 5) {
-        displayThree.textContent = `COMPUTER WINS. TRY AGAIN.`;
-    } else {
-        displayThree.textContent = `GAME IN PROGRESS`;
-    }
+    displayThree.textContent = `CONGRATS! YOU WIN`;
+  } else if (computerScore == 5) {
+      displayThree.textContent = `COMPUTER WINS. TRY AGAIN.`;
+  } else {
+    displayThree.textContent = `GAME IN PROGRESS`;
+  }
 
   if (humanChoice === "rock" && computerChoice === "scissors") {
       display.textContent = "You win! Rock beats scissors!";
@@ -49,14 +49,14 @@ function playRound(humanChoice) {
       ++computerScore;
       return computerScore;
   } else if (computerChoice === humanChoice) {
-      display.textContent = "It's a tie!";
+      display.textContent = "You tied!";
   } 
-
 } 
 
 const rock = document.querySelector(".rock");
 const scissors = document.querySelector(".scissors");
 const paper = document.querySelector(".paper");
+const reset = document.querySelector(".reset");
 
 rock.addEventListener("click", () => {
   playRound("rock");
@@ -70,7 +70,6 @@ scissors.addEventListener("click", () => {
   playRound("scissors");
 });
 
-const reset = document.querySelector(".reset");
 reset.addEventListener("click", () => {
   window.location.reload();
 });
