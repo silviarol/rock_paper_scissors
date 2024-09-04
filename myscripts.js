@@ -17,7 +17,7 @@ function playRound(humanChoice) {
   displayTwo.textContent = `Computer score: ${computerScore} | Your score: ${humanScore}`;
 
   if (humanScore == 5) {
-        displayThree.textContent = `CONGRATS YOU WIN`;
+        displayThree.textContent = `CONGRATS! YOU WIN`;
     } else if (computerScore == 5) {
         displayThree.textContent = `COMPUTER WINS. TRY AGAIN.`;
     } else {
